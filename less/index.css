@@ -7,7 +7,7 @@
   -webkit-font-smoothing: antialiased;
 }
 body {
-  font-size: 14px;
+  font-size: 0.14rem;
   background: #fff;
   font-family: -apple-system, Helvetica, sans-serif;
   line-height: 1.5;
@@ -28,6 +28,9 @@ img {
 }
 i {
   font-style: normal;
+}
+html {
+  font-size: 26.6667vw;
 }
 .bt {
   border-top: 1px solid #ccc;
@@ -50,18 +53,18 @@ i {
   z-index: 2;
 }
 #header .left {
-  width: 80px;
-  height: 40px;
+  width: 0.8rem;
+  height: 0.4rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 #header .left a {
   background-image: url(../images/sprites.png);
-  background-size: 200px 200px;
-  background-position: 0 -110px;
-  width: 58px;
-  height: 21px;
+  background-size: 2rem 2rem;
+  background-position: 0 -1.1rem;
+  width: 0.58rem;
+  height: 0.21rem;
   display: block;
 }
 #header .center {
@@ -75,29 +78,30 @@ i {
 }
 #header .center form i {
   background-image: url(../images/sprites.png);
-  background-size: 200px 200px;
-  background-position: -58px -110px;
-  width: 21px;
-  height: 21px;
+  background-size: 2rem 2rem;
+  background-position: -0.58rem -1.1rem;
+  width: 0.21rem;
+  height: 0.21rem;
   position: absolute;
-  left: 5px;
-  top: 6px;
+  left: 0.05rem;
+  top: 0.06rem;
 }
 #header .center form input {
   width: 100%;
-  height: 30px;
-  border-radius: 15px;
-  padding-left: 30px;
+  height: 0.3rem;
+  border-radius: 0.15rem;
+  padding-left: 0.3rem;
+  font-size: 0.14rem;
 }
 #header .right {
-  width: 50px;
-  height: 40px;
+  width: 0.5rem;
+  height: 0.4rem;
 }
 #header .right a {
   display: block;
   color: #fff;
   text-align: center;
-  line-height: 40px;
+  line-height: 0.4rem;
 }
 #slide img {
   width: 100%;
@@ -117,51 +121,51 @@ i {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5px 0;
+  padding: 0.05rem 0;
 }
 #nav ul li a img {
-  width: 40px;
+  width: 0.4rem;
 }
 #nav ul li a p {
-  margin: 5px;
+  margin: 0.05rem;
 }
 #main {
-  padding: 10px;
-  margin-bottom: 50px;
+  padding: 0.1rem;
+  margin-bottom: 0.5rem;
   background-color: #f5f5f5;
 }
 #main .seckill {
   background-color: white;
-  box-shadow: 0px 0px 1px #665;
+  box-shadow: 0px 0px 0.01rem #665;
 }
 #main .seckill .title {
   display: flex;
   justify-content: space-between;
-  line-height: 30px;
+  line-height: 0.3rem;
 }
 #main .seckill .title .left {
   display: flex;
 }
 #main .seckill .title .left .seckill-icon {
-  width: 20px;
-  height: 25px;
-  margin-left: 5px;
+  width: 0.2rem;
+  height: 0.25rem;
+  margin-left: 0.05rem;
 }
 #main .seckill .title .left .text {
-  margin: 0 6px;
+  margin: 0 0.06rem;
   color: #cc332a;
 }
 #main .seckill .title .left .seckill-time span:not(:nth-child(3n)) {
   display: inline-block;
-  width: 15px;
-  height: 15px;
-  line-height: 15px;
+  width: 0.15rem;
+  height: 0.15rem;
+  line-height: 0.15rem;
   text-align: center;
   background-color: #000;
   color: #fff;
 }
 #main .seckill .title .right .seckill-more {
-  margin-right: 10px;
+  margin-right: 0.1rem;
 }
 #main .seckill .content ul {
   display: flex;
@@ -174,11 +178,11 @@ i {
   text-align: center;
 }
 #main .seckill .content ul li a img {
-  width: 110px;
-  height: 110px;
+  width: 1.1rem;
+  height: 1.1rem;
 }
 #main .seckill .content ul li a p {
-  font-size: 12px;
+  font-size: 0.12rem;
   text-align: center;
   color: #cc332a;
 }
@@ -186,30 +190,30 @@ i {
   color: #666;
 }
 #main .seckill .content ul li ~ li {
-  border-left: 1px solid #ccc;
+  border-left: 0.01rem solid #ccc;
 }
 #main .jd-market {
-  margin-top: 10px;
+  margin-top: 0.1rem;
   background-color: white;
-  box-shadow: 0px 0px 1px #665;
+  box-shadow: 0px 0px 0.01rem #665;
 }
 #main .jd-market .title {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 0.01rem solid #ccc;
 }
 #main .jd-market .title h4 {
-  line-height: 30px;
-  padding-left: 30px;
+  line-height: 0.3rem;
+  padding-left: 0.3rem;
   font-weight: normal;
   position: relative;
 }
 #main .jd-market .title h4::before {
   content: '';
-  width: 4px;
-  height: 15px;
+  width: 0.04rem;
+  height: 0.15rem;
   background-color: #cc332a;
   position: absolute;
-  left: 20px;
-  top: 7px;
+  left: 0.2rem;
+  top: 0.07rem;
 }
 #main .jd-market .content {
   display: flex;
@@ -251,6 +255,6 @@ i {
   text-align: center;
 }
 #footer ul li a img {
-  width: 65px;
-  height: 50px;
+  width: 0.65rem;
+  height: 0.5rem;
 }

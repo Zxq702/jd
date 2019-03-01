@@ -1,15 +1,6 @@
 // 在index.less里面引入公用样式:base.less
-@import 'base.less';
-
-// 声明京东红
-@jd-color:#cc332a;
-// 声明字体颜色
-@font-color:#666;
-// 声明边框颜色
-@border-color:#ccc;
-// 声明盒子阴影
-@box-shadow: 0px 0px 1px #665;
-
+@import 'less/base.less';
+   
 // 头部区域样式
 #header {
     position: fixed;
@@ -20,22 +11,22 @@
     z-index: 2;
 
     .left {
-        width: 80px;
-        height: 40px;
+        width: 0.8rem;
+        height: 0.4rem;
         display: flex;
         justify-content: center;
         align-items: center;
 
         a {
             background-image: url(../images/sprites.png);
-            background-size: 200px 200px;
-            background-position: 0 -110px;
-            width: 58px;
-            height: 21px;
+            background-size: 2rem 2rem;
+            background-position: 0 -1.1rem;
+            width: 0.58rem;
+            height: 0.21rem;
             display: block;
         }
     }
-    .center {
+    .center { 
         flex: 1;
         display: flex;
         align-items: center;
@@ -46,35 +37,37 @@
 
             i{
                 background-image: url(../images/sprites.png);
-                background-size: 200px 200px;
-                background-position: -58px -110px;
-                width: 21px;
-                height: 21px;
+                background-size: 2rem 2rem;
+                background-position: -0.58rem -1.1rem;
+                width: 0.21rem;
+                height: 0.21rem;
                 position: absolute;
-                left: 5px;
-                top: 6px;
+                left: 0.05rem;
+                top: 0.06rem;
             }
             input {
                 width: 100%;
-                height: 30px;
-                border-radius: 15px;
-                padding-left: 30px;
+                height: 0.3rem;
+                border-radius: 0.15rem;
+                padding-left: 0.3rem;
+                font-size: 0.14rem;
             }
         }
     }
     .right {
-        width: 50px;
-        height: 40px;
+        width: 0.5rem;
+        height: 0.4rem;
         a {
             display: block;
             color: #fff;
             text-align: center;
-            line-height: 40px;
+            line-height: 0.4rem;
         }
     }
 }
 // 轮播图
 #slide{
+    // 让图片适应父盒子的大小
     img{
         width: 100%;
     }
@@ -96,21 +89,21 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                padding: 5px 0;
+                padding: 0.05rem 0;
 
                 img {
-                    width: 40px;
+                    width: 0.4rem;
                 }
                 p {  
-                    margin: 5px;
+                    margin: 0.05rem;
                 }
             }          
         }
     }
 }
 #main{
-    padding: 10px;
-    margin-bottom: 50px;
+    padding: 0.1rem;
+    margin-bottom: 0.5rem;
     background-color: #f5f5f5;
 
     .seckill{
@@ -118,31 +111,31 @@
         box-shadow: @box-shadow;
 
         .title{
-            // height: 30px;
+            // height: 0.3rem;
             display: flex;
             justify-content: space-between;
-            line-height: 30px;
+            line-height: 0.3rem;
             // position: relative;
 
             .left{
                 display: flex;
 
                 .seckill-icon{
-                    width: 20px;
-                    height: 25px;
-                    margin-left: 5px;
+                    width: 0.2rem;
+                    height: 0.25rem;
+                    margin-left: 0.05rem;
                 }
                 .text{   
-                    margin: 0 6px;
+                    margin: 0 0.06rem;
                     color: @jd-color;
                 }
                 .seckill-time{
                     // :not 排除伪类 把你要排除元素选择器放在括号里面
                     span:not(:nth-child(3n)) {
                         display: inline-block;
-                        width: 15px;
-                        height: 15px;
-                        line-height: 15px;
+                        width: 0.15rem;
+                        height: 0.15rem;
+                        line-height: 0.15rem;
                         text-align: center;
                         background-color: #000;
                         color: #fff;
@@ -151,7 +144,7 @@
             }
             .right{
                 .seckill-more {
-                    margin-right: 10px;
+                    margin-right: 0.1rem;
                 }
             }          
         }
@@ -164,11 +157,11 @@
                         display: block;
                         text-align: center;
                         img{
-                            width: 110px;
-                            height: 110px;
+                            width: 1.1rem;
+                            height: 1.1rem;
                         }
                         p{
-                            font-size: 12px;
+                            font-size: 0.12rem;
                             text-align: center;
                             color: @jd-color;
                             del{
@@ -177,7 +170,6 @@
                         }
                     }
                 }
-
                 // 第1种方法
                 // li:nth-child(n+2){
                 //     border-left: 1px solid #cccccc; 
@@ -189,31 +181,31 @@
                 // 第3种方法
                 // ~表示相邻后面的所有兄弟 而且满足后面这个选择器 第一li后面所有兄弟li
                 li~li {
-                    border-left: 1px solid #ccc;
-                }                           
+                    border-left: 0.01rem solid #ccc;
+                }                
             }          
         }
     }
     .jd-market{
-        margin-top: 10px;
+        margin-top: 0.1rem;
         background-color: white;
         box-shadow: @box-shadow;
         .title{
-            border-bottom: 1px solid @border-color;    
+            border-bottom: 0.01rem solid @border-color;    
             h4{
-                line-height: 30px;
-                padding-left: 30px;
+                line-height: 0.3rem;
+                padding-left: 0.3rem;
                 font-weight: normal;
                 position: relative;
             }
             h4::before{
                 content: '';
-                width: 4px;
-                height: 15px;
+                width: 0.04rem;
+                height: 0.15rem;
                 background-color: @jd-color;
                 position: absolute;
-                left: 20px;
-                top: 7px;
+                left: 0.2rem;
+                top: 0.07rem;
             }      
         }
         .content{
@@ -254,8 +246,8 @@
                 display: block;
                 text-align: center;
                 img{
-                    width: 65px;
-                    height: 50px;
+                    width: 0.65rem;
+                    height: 0.5rem;
                 }
             }
         }

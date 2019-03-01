@@ -10,7 +10,7 @@
     -webkit-font-smoothing:antialiased;
 }
 body{
-    font-size: 14px;
+    font-size: 0.14rem; 
     background: #fff;
     font-family: -apple-system, Helvetica, sans-serif;
     line-height: 1.5;
@@ -33,10 +33,25 @@ img{
 i{
     font-style: normal;
 }
+
+// 给每个页码的字体设置屏幕适配
+html{
+    font-size: 26.6667vw;
+}
+ 
+// 声明京东红
+@jd-color:#cc332a;
+// 声明字体颜色
+@font-color:#666;
+// 声明边框颜色
+@border-color:#ccc;
+// 声明盒子阴影
+@box-shadow: 0px 0px 0.01rem #665;
+
 // 定义一些公共边框类名,谁需要哪个边框就加哪个类
 .bt{
     border-top: 1px solid #ccc;
-}
+}  
 .bb{
     border-bottom: 1px solid #ccc;
 }
@@ -45,4 +60,91 @@ i{
 }
 .br{
     border-right: 1px solid #ccc;
+}
+
+// 头部区域样式
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    z-index: 2;
+
+    .left {
+        width: 0.8rem;
+        height: 0.4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+            background-image: url(../images/sprites.png);
+            background-size: 2rem 2rem;
+            background-position: 0 -1.1rem;
+            width: 0.58rem;
+            height: 0.21rem;
+            display: block;
+        }
+    }
+    .center { 
+        flex: 1;
+        display: flex;
+        align-items: center;
+
+        form {
+            width: 100%;
+            position: relative;
+
+            i{
+                background-image: url(../images/sprites.png);
+                background-size: 2rem 2rem;
+                background-position: -0.58rem -1.1rem;
+                width: 0.21rem;
+                height: 0.21rem;
+                position: absolute;
+                left: 0.05rem;
+                top: 0.06rem;
+            }
+            input {
+                width: 100%;
+                height: 0.3rem;
+                border-radius: 0.15rem;
+                padding-left: 0.3rem;
+                font-size: 0.14rem;
+            }
+        }
+    }
+    .right {
+        width: 0.5rem;
+        height: 0.4rem;
+        a {
+            display: block;
+            color: #fff;
+            text-align: center;
+            line-height: 0.4rem;
+        }
+    }
+}
+/* 底部区域的样式 */
+#footer{
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    ul{
+        display: flex;
+        li{
+            width: 25%;
+            a{
+                display: block;
+                text-align: center;
+                img{
+                    width: 0.65rem;
+                    height: 0.5rem;
+                }
+            }
+        }
+    }
 }
