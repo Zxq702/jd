@@ -1,0 +1,262 @@
+// 在index.less里面引入公用样式:base.less
+@import 'base.less';
+
+// 声明京东红
+@jd-color:#cc332a;
+// 声明字体颜色
+@font-color:#666;
+// 声明边框颜色
+@border-color:#ccc;
+// 声明盒子阴影
+@box-shadow: 0px 0px 1px #665;
+
+// 头部区域样式
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+
+    .left {
+        width: 80px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+            background-image: url(../images/sprites.png);
+            background-size: 200px 200px;
+            background-position: 0 -110px;
+            width: 58px;
+            height: 21px;
+            display: block;
+        }
+    }
+    .center {
+        flex: 1;
+        display: flex;
+        align-items: center;
+
+        form {
+            width: 100%;
+            position: relative;
+
+            i{
+                background-image: url(../images/sprites.png);
+                background-size: 200px 200px;
+                background-position: -58px -110px;
+                width: 21px;
+                height: 21px;
+                position: absolute;
+                left: 5px;
+                top: 6px;
+            }
+            input {
+                width: 100%;
+                height: 30px;
+                border-radius: 15px;
+                padding-left: 30px;
+            }
+        }
+    }
+    .right {
+        width: 50px;
+        height: 40px;
+        a {
+            display: block;
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+        }
+    }
+}
+// 轮播图
+#slide{
+    img {
+        width: 100%;
+    }
+}
+// 导航区域样式
+#nav{
+    padding: 10px 0;
+    ul {
+        display: flex;
+        // 设置成行
+        flex-wrap: wrap;
+        li {
+            width: 25%;
+            a {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 40px;
+                }
+                p {  
+                    width: 100%;
+                    text-align: center;
+                    line-height: 19px;
+                    margin: 5px 0;
+                }
+            }          
+        }
+    }
+}
+#main{
+    height: 1500px;
+    padding: 10px;
+    background-color: #f5f5f5;
+
+    .seckill{
+        background-color: white;     
+        box-shadow: @box-shadow;
+
+        .title{
+            height: 30px;
+            display: flex;
+            justify-content: space-between;
+            line-height: 30px;
+            position: relative;
+
+            .left{
+                display: flex;
+                margin-left: 5px;
+
+                .seckill-icon{
+                    width: 20px;
+                    height: 25px;
+                }
+                .text{   
+                    margin: 0 6px;
+                    color: @jd-color;
+                }
+                .seckill-time{
+                    span{
+                        width: 15px;
+                        height: 15px;
+                        display: inline-block;
+                        background-color: black;              
+                        text-align: center;
+                        color: white;
+                        line-height: 15px;
+                    }
+                    :nth-child(3n){
+                        width: 0;
+                        height: 0;
+                        background-color: white;
+                        color: black;
+                        margin-right: 2px;
+                    }
+                }               
+            }
+            .more{
+                position: absolute;
+                right: 8px;
+                top: 0;
+                text-align: center;
+                color: @font-color;
+            }          
+        }
+        .content{
+            display: flex;
+            width: 100%;
+            height: 142px;
+            ul{ 
+                width: 100%;
+                display: flex;
+                li{
+                    flex: 1;
+                    border-left: 1px solid #cccccc;                  
+                    a{  
+                        display: block;
+                        text-align: center;
+                        img{
+                            width: 110px;
+                            height: 110px;
+                        }
+                        p{
+                            height: 16px;
+                            line-height: 16px;
+                            span{
+                                font-size: 8px;
+                                color: @jd-color;
+                            }
+                            del{
+                                font-size: 8px;
+                                color: @font-color;
+                            }
+                        }
+                    }
+                }
+                :nth-child(1){
+                    border: 0;
+                }               
+            }          
+        }
+    }
+    .jd-market{
+        margin-top: 10px;
+        background-color: white;
+        box-shadow: @box-shadow;
+        .title{
+            display: flex;
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            border-bottom: 1px solid @border-color;
+            .red{
+                width: 4px;
+                height: 15px;
+                background-color: @jd-color;
+                margin: 7.5px 5px 7.5px 15px;
+            }           
+        }
+        .content{
+            width: 100%;
+            height: 194px;
+            display: flex;
+            div{
+                flex: 1;
+            }
+            .left{
+                height: 100%;
+                a{  
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        border-right: 1px solid @border-color;
+                    }   
+                } 
+            }
+            .right{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                align-items: center;
+                flex: 1;
+                height: 100%;
+                a{  
+                    width: 100%;
+                    flex: 1;
+                    display: flex;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                a.top{
+                    height: 98px;
+                    border-bottom: 1px solid @border-color;
+                }
+            }
+        }      
+    }
+}

@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  font-size: 14px;
+  background: #fff;
+  font-family: -apple-system, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+li {
+  list-style: none;
+}
+input {
+  outline: none;
+  border: 0;
+}
+img {
+  vertical-align: middle;
+}
+i {
+  font-style: normal;
+}
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+}
+#header .left {
+  width: 80px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header .left a {
+  background-image: url(../images/sprites.png);
+  background-size: 200px 200px;
+  background-position: 0 -110px;
+  width: 58px;
+  height: 21px;
+  display: block;
+}
+#header .center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+#header .center form {
+  width: 100%;
+  position: relative;
+}
+#header .center form i {
+  background-image: url(../images/sprites.png);
+  background-size: 200px 200px;
+  background-position: -58px -110px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  left: 5px;
+  top: 6px;
+}
+#header .center form input {
+  width: 100%;
+  height: 30px;
+  border-radius: 15px;
+  padding-left: 30px;
+}
+#header .right {
+  width: 50px;
+  height: 40px;
+}
+#header .right a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+}
+#slide img {
+  width: 100%;
+}
+#nav {
+  padding: 10px 0;
+}
+#nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+#nav ul li {
+  width: 25%;
+}
+#nav ul li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#nav ul li a img {
+  width: 40px;
+}
+#nav ul li a p {
+  width: 100%;
+  text-align: center;
+  line-height: 19px;
+  margin: 5px 0;
+}
+#main {
+  height: 1500px;
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+#main .seckill {
+  background-color: white;
+  box-shadow: 0px 0px 1px #665;
+}
+#main .seckill .title {
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  line-height: 30px;
+  position: relative;
+}
+#main .seckill .title .left {
+  display: flex;
+  margin-left: 5px;
+}
+#main .seckill .title .left .seckill-icon {
+  width: 20px;
+  height: 25px;
+}
+#main .seckill .title .left .text {
+  margin: 0 6px;
+  color: #cc332a;
+}
+#main .seckill .title .left .seckill-time span {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  background-color: black;
+  text-align: center;
+  color: white;
+  line-height: 15px;
+}
+#main .seckill .title .left .seckill-time :nth-child(3n) {
+  width: 0;
+  height: 0;
+  background-color: white;
+  color: black;
+  margin-right: 2px;
+}
+#main .seckill .title .more {
+  position: absolute;
+  right: 8px;
+  top: 0;
+  text-align: center;
+  color: #666;
+}
+#main .seckill .content {
+  display: flex;
+  width: 100%;
+  height: 142px;
+}
+#main .seckill .content ul {
+  width: 100%;
+  display: flex;
+}
+#main .seckill .content ul li {
+  flex: 1;
+  border-left: 1px solid #cccccc;
+}
+#main .seckill .content ul li a {
+  display: block;
+  text-align: center;
+}
+#main .seckill .content ul li a img {
+  width: 110px;
+  height: 110px;
+}
+#main .seckill .content ul li a p {
+  height: 16px;
+  line-height: 16px;
+}
+#main .seckill .content ul li a p span {
+  font-size: 8px;
+  color: #cc332a;
+}
+#main .seckill .content ul li a p del {
+  font-size: 8px;
+  color: #666;
+}
+#main .seckill .content ul :nth-child(1) {
+  border: 0;
+}
+#main .jd-market {
+  margin-top: 10px;
+  background-color: white;
+  box-shadow: 0px 0px 1px #665;
+}
+#main .jd-market .title {
+  display: flex;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 1px solid #ccc;
+}
+#main .jd-market .title .red {
+  width: 4px;
+  height: 15px;
+  background-color: #cc332a;
+  margin: 7.5px 5px 7.5px 15px;
+}
+#main .jd-market .content {
+  width: 100%;
+  height: 194px;
+  display: flex;
+}
+#main .jd-market .content div {
+  flex: 1;
+}
+#main .jd-market .content .left {
+  height: 100%;
+}
+#main .jd-market .content .left a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+#main .jd-market .content .left a img {
+  width: 100%;
+  height: 100%;
+  border-right: 1px solid #ccc;
+}
+#main .jd-market .content .right {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+}
+#main .jd-market .content .right a {
+  width: 100%;
+  flex: 1;
+  display: flex;
+}
+#main .jd-market .content .right a img {
+  width: 100%;
+  height: 100%;
+}
+#main .jd-market .content .right a.top {
+  height: 98px;
+  border-bottom: 1px solid #ccc;
+}
